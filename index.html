@@ -1,292 +1,142 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Świat Przynęt Wędkarskich</title>
+<title>Przynęty Wędkarskie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poradnik Wędkarski</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-body{
-    background:#0b1418;
-    color:#e8f1f2;
-    line-height:1.6;
-}
+        body {
+            background: #f4f7f9;
+            color: #333;
+        }
 
-/* NAV */
-header{
-    background:#102a33;
-    padding:20px;
-    position:sticky;
-    top:0;
-    z-index:999;
-}
+        header {
+            background: #0d6e4f;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-}
+        nav {
+            background: #094d38;
+            padding: 15px;
+            text-align: center;
+        }
 
-nav h1{
-    color:#00ffd5;
-    font-size:22px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-nav ul{
-    display:flex;
-    gap:15px;
-    list-style:none;
-}
+        section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    padding:8px 12px;
-    border-radius:6px;
-    transition:0.3s;
-}
+        h2 {
+            color: #0d6e4f;
+            margin-bottom: 15px;
+        }
 
-nav a:hover{
-    background:#00ffd5;
-    color:#000;
-}
+        ul li {
+            margin: 10px 0;
+        }
 
-/* HERO */
-.hero{
-    padding:60px 20px;
-    text-align:center;
-    background:linear-gradient(135deg,#0b1418,#12343b);
-}
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #094d38;
+            color: white;
+            margin-top: 30px;
+        }
 
-.hero h2{
-    font-size:40px;
-    color:#00ffd5;
-}
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-.hero p{
-    margin-top:15px;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-/* SEKCJE */
-section{
-    padding:50px 20px;
-    max-width:1100px;
-    margin:auto;
-}
-
-.card{
-    background:#102a33;
-    padding:20px;
-    border-radius:10px;
-    margin:15px 0;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:scale(1.02);
-    background:#133640;
-}
-
-h3{
-    color:#00ffd5;
-    margin-bottom:10px;
-}
-
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
-}
-
-/* SEARCH */
-input{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    margin-bottom:20px;
-    outline:none;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    background:#102a33;
-    margin-top:40px;
-    font-size:14px;
-}
-
-/* MOBILE */
-@media(max-width:700px){
-    nav ul{
-        flex-direction:column;
-        width:100%;
-        margin-top:10px;
-    }
-}
-</style>
-
+        .hero p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
+<h1>Przynęty Wędkarskie</h1>
+<p>🎣 Gumy - na szczupaka i sandacza.</p>
+<p>🎣 Woblery - imitują ryby.</p>
+<p>🎣 Błystki - klasyczna przynęta spinningowa.</p>
 
 <header>
-<nav>
-<h1>🎣 Świat Przynęt</h1>
-<ul>
-<li><a href="#przynety">Przynęty</a></li>
-<li><a href="#zbrojenie">Zbrojenie</a></li>
-<li><a href="#techniki">Techniki</a></li>
-<li><a href="#gatunki">Gatunki</a></li>
-</ul>
-</nav>
+    <h1>🎣 Poradnik Wędkarski</h1>
+    <p>Wszystko, co musisz wiedzieć o wędkarstwie</p>
 </header>
 
+<nav>
+    <a href="#sprzet">Sprzęt</a>
+    <a href="#ryby">Ryby</a>
+    <a href="#porady">Porady</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
 <div class="hero">
-<h2>Wszystko o przynętach wędkarskich</h2>
-<p>
-Dowiedz się jak używać gum, woblerów, obrotówek i innych przynęt.
-Poznaj sposoby zbrojenia i techniki prowadzenia na drapieżniki.
-</p>
+    <h2>Witaj na stronie Poradnik Wędkarski</h2>
+    <p>Poznaj techniki łowienia, sprzęt i najpopularniejsze gatunki ryb.</p>
 </div>
 
-<section id="przynety">
-<h2>Przynęty</h2>
-
-<input type="text" id="search" placeholder="Szukaj przynęty...">
-
-<div class="grid" id="list">
-
-<div class="card">
-<h3>Wobler</h3>
-<p>Idealny na szczupaka i okonia. Pracuje w wodzie imitując rybkę.</p>
-</div>
-
-<div class="card">
-<h3>Guma (softbait)</h3>
-<p>Najbardziej uniwersalna przynęta. Używana na jig główkach.</p>
-</div>
-
-<div class="card">
-<h3>Obrotówka</h3>
-<p>Daje mocne wibracje. Działa świetnie w rzekach.</p>
-</div>
-
-<div class="card">
-<h3>Wahadłówka</h3>
-<p>Klasyka na szczupaka i pstrąga.</p>
-</div>
-
-<div class="card">
-<h3>Jerkbait</h3>
-<p>Agresywna praca, prowadzenie szarpane.</p>
-</div>
-
-<div class="card">
-<h3>Spinnerbait</h3>
-<p>Idealny na zarośnięte wody.</p>
-</div>
-
-</div>
+<section id="sprzet">
+    <h2>Sprzęt Wędkarski</h2>
+    <ul>
+        <li>Wędka spinningowa</li>
+        <li>Kołowrotek</li>
+        <li>Żyłka lub plecionka</li>
+        <li>Przynęty sztuczne i naturalne</li>
+        <li>Podbierak</li>
+    </ul>
 </section>
 
-<section id="zbrojenie">
-<h2>Jak zbroić przynęty</h2>
-
-<div class="card">
-<h3>Guma + główka jigowa</h3>
-<p>Nakłuwasz gumę na hak tak, aby była prosto osadzona. To podstawowa metoda.</p>
-</div>
-
-<div class="card">
-<h3>Offset hook</h3>
-<p>Do łowienia w roślinach — hak ukryty w gumie.</p>
-</div>
-
-<div class="card">
-<h3>Wobler</h3>
-<p>Podpinasz agrafką do żyłki lub plecionki.</p>
-</div>
-
+<section id="ryby">
+    <h2>Popularne Ryby</h2>
+    <ul>
+        <li>Szczupak</li>
+        <li>Sandacz</li>
+        <li>Okoń</li>
+        <li>Karp</li>
+        <li>Sum</li>
+    </ul>
 </section>
 
-<section id="techniki">
-<h2>Techniki prowadzenia</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Stabilne prowadzenie</h3>
-<p>Równe zwijanie — dobre na obrotówki.</p>
-</div>
-
-<div class="card">
-<h3>Stop & Go</h3>
-<p>Zatrzymania i starty — działa na drapieżniki.</p>
-</div>
-
-<div class="card">
-<h3>Jigowanie</h3>
-<p>Opadanie przynęty i podbijanie z dna.</p>
-</div>
-
-</div>
+<section id="porady">
+    <h2>Przydatne Porady</h2>
+    <p>
+        Zawsze sprawdzaj przepisy obowiązujące na danym łowisku,
+        używaj odpowiedniego sprzętu do gatunku ryby oraz dbaj o środowisko.
+    </p>
 </section>
 
-<section id="gatunki">
-<h2>Gatunki ryb</h2>
-
-<div class="card">
-<h3>Szczupak</h3>
-<p>Najlepsze: duże gumy, jerki, wahadłówki.</p>
-</div>
-
-<div class="card">
-<h3>Okoń</h3>
-<p>Małe gumy, obrotówki.</p>
-</div>
-
-<div class="card">
-<h3>Sandacz</h3>
-<p>Gumy na opadzie, jig.</p>
-</div>
-
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Email: kontakt@poradnikwedkarski.pl</p>
 </section>
 
 <footer>
-<p>© 2026 Świat Przynęt Wędkarskich | Strona edukacyjna</p>
+    <p>© 2026 Poradnik Wędkarski</p>
 </footer>
-
-<script>
-// SEARCH FILTER
-const search = document.getElementById("search");
-const cards = document.querySelectorAll(".card");
-
-search.addEventListener("keyup", function(){
-    let value = this.value.toLowerCase();
-
-    cards.forEach(card => {
-        let text = card.innerText.toLowerCase();
-        if(text.includes(value)){
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
-    });
-});
-</script>
 
 </body>
 </html>
