@@ -1,299 +1,292 @@
-```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>esssa PRO</title>
+<title>Świat Przynęt Wędkarskich</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0b1418;
+    color:#e8f1f2;
+    line-height:1.6;
+}
+
+/* NAV */
+header{
+    background:#102a33;
+    padding:20px;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+nav h1{
+    color:#00ffd5;
+    font-size:22px;
+}
+
+nav ul{
+    display:flex;
+    gap:15px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:8px 12px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:#00ffd5;
+    color:#000;
+}
+
+/* HERO */
+.hero{
+    padding:60px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#0b1418,#12343b);
+}
+
+.hero h2{
+    font-size:40px;
+    color:#00ffd5;
+}
+
+.hero p{
+    margin-top:15px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* SEKCJE */
+section{
+    padding:50px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    background:#102a33;
+    padding:20px;
+    border-radius:10px;
+    margin:15px 0;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.02);
+    background:#133640;
+}
+
+h3{
+    color:#00ffd5;
+    margin-bottom:10px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+/* SEARCH */
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    margin-bottom:20px;
+    outline:none;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#102a33;
+    margin-top:40px;
+    font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+    nav ul{
+        flex-direction:column;
+        width:100%;
+        margin-top:10px;
+    }
+}
+</style>
 
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">🎣 Poradnik Wędkarski PRO</div>
-
-    <ul class="nav-links">
-        <li><a href="#home">Start</a></li>
-        <li><a href="#przynety">Przynęty</a></li>
-        <li><a href="#ryby">Ryby</a></li>
-        <li><a href="#ranking">TOP 20</a></li>
-        <li><a href="#porady">Porady</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
-
-    <button id="themeToggle">🌙</button>
+<header>
+<nav>
+<h1>🎣 Świat Przynęt</h1>
+<ul>
+<li><a href="#przynety">Przynęty</a></li>
+<li><a href="#zbrojenie">Zbrojenie</a></li>
+<li><a href="#techniki">Techniki</a></li>
+<li><a href="#gatunki">Gatunki</a></li>
+</ul>
 </nav>
-
-<!-- HERO -->
-<header id="home" class="hero">
-
-    <div class="hero-content">
-        <h1>Największy Poradnik Wędkarski</h1>
-        <p>
-            Poznaj skuteczne przynęty, techniki zbrojenia,
-            sposoby prowadzenia oraz najlepsze zestawy
-            na szczupaka, sandacza, okonia i karpia.
-        </p>
-        <a href="#przynety" class="btn">
-            Rozpocznij
-    </a>
-    </div>
 </header>
-<!-- SEARCH -->
-<section class="search-section">
-    <h2>Wyszukiwarka Przynęt</h2>
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Wpisz nazwę przynęty..."
-    >
-</section>
-<!-- PRZYNĘTY -->
+
+<div class="hero">
+<h2>Wszystko o przynętach wędkarskich</h2>
+<p>
+Dowiedz się jak używać gum, woblerów, obrotówek i innych przynęt.
+Poznaj sposoby zbrojenia i techniki prowadzenia na drapieżniki.
+</p>
+</div>
+
 <section id="przynety">
+<h2>Przynęty</h2>
 
-<h2 class="section-title">Rodzaje Przynęt</h2>
+<input type="text" id="search" placeholder="Szukaj przynęty...">
 
-<div class="cards" id="baitContainer">
+<div class="grid" id="list">
 
 <div class="card">
-<h3>🪱 Robaki</h3>
-<p>
-Naturalna przynęta idealna na leszcze,
-karasie oraz płocie.
-</p>
+<h3>Wobler</h3>
+<p>Idealny na szczupaka i okonia. Pracuje w wodzie imitując rybkę.</p>
 </div>
 
 <div class="card">
-<h3>🌽 Kukurydza</h3>
-<p>
-Świetna na karpie i amury.
-Popularna na łowiskach komercyjnych.
-</p>
+<h3>Guma (softbait)</h3>
+<p>Najbardziej uniwersalna przynęta. Używana na jig główkach.</p>
 </div>
 
 <div class="card">
-<h3>🐟 Woblery</h3>
-<p>
-Imitują ranną rybkę.
-Bardzo skuteczne na szczupaki.
-</p>
-</div>
-<div class="card">
-<h3>🦐 Gumy</h3>
-<p>
-Rippery, twistery i shady
-na sandacze oraz okonie.
-</p>
+<h3>Obrotówka</h3>
+<p>Daje mocne wibracje. Działa świetnie w rzekach.</p>
 </div>
 
 <div class="card">
-<h3>✨ Błystki</h3>
-<p>
-Klasyczne przynęty spinningowe.
-Skuteczne od wielu lat.
-</p>
+<h3>Wahadłówka</h3>
+<p>Klasyka na szczupaka i pstrąga.</p>
 </div>
 
 <div class="card">
-<h3>🐸 Żaby</h3>
-<p>
-Przynęty powierzchniowe
-na duże szczupaki.
-</p>
+<h3>Jerkbait</h3>
+<p>Agresywna praca, prowadzenie szarpane.</p>
 </div>
 
+<div class="card">
+<h3>Spinnerbait</h3>
+<p>Idealny na zarośnięte wody.</p>
+</div>
+
+</div>
+</section>
+
+<section id="zbrojenie">
+<h2>Jak zbroić przynęty</h2>
+
+<div class="card">
+<h3>Guma + główka jigowa</h3>
+<p>Nakłuwasz gumę na hak tak, aby była prosto osadzona. To podstawowa metoda.</p>
+</div>
+
+<div class="card">
+<h3>Offset hook</h3>
+<p>Do łowienia w roślinach — hak ukryty w gumie.</p>
+</div>
+
+<div class="card">
+<h3>Wobler</h3>
+<p>Podpinasz agrafką do żyłki lub plecionki.</p>
 </div>
 
 </section>
 
-<!-- RYBY -->
-<section id="ryby">
+<section id="techniki">
+<h2>Techniki prowadzenia</h2>
 
-<h2 class="section-title">
-Przynęty według gatunku ryby
-</h2>
+<div class="grid">
 
-<div class="fish-grid">
-
-<div class="fish-box">
-<h3>🐊 Szczupak</h3>
-<ul>
-<li>Woblery</li>
-<li>Gumy 10-20 cm</li>
-<li>Błystki wahadłowe</li>
-</ul>
+<div class="card">
+<h3>Stabilne prowadzenie</h3>
+<p>Równe zwijanie — dobre na obrotówki.</p>
 </div>
 
-<div class="fish-box">
-<h3>⚡ Sandacz</h3>
-<ul>
-<li>Shady</li>
-<li>Rippery</li>
-<li>Martwa rybka</li>
-</ul>
+<div class="card">
+<h3>Stop & Go</h3>
+<p>Zatrzymania i starty — działa na drapieżniki.</p>
 </div>
 
-<div class="fish-box">
-<h3>🐟 Okoń</h3>
-<ul>
-<li>Małe gumy</li>
-<li>Obrotówki</li>
-<li>Cykady</li>
-</ul>
+<div class="card">
+<h3>Jigowanie</h3>
+<p>Opadanie przynęty i podbijanie z dna.</p>
 </div>
 
-<div class="fish-box">
-<h3>🐳 Karp</h3>
-<ul>
-<li>Kukurydza</li>
-<li>Kulki proteinowe</li>
-<li>Pellet</li>
-</ul>
+</div>
+</section>
+
+<section id="gatunki">
+<h2>Gatunki ryb</h2>
+
+<div class="card">
+<h3>Szczupak</h3>
+<p>Najlepsze: duże gumy, jerki, wahadłówki.</p>
 </div>
 
+<div class="card">
+<h3>Okoń</h3>
+<p>Małe gumy, obrotówki.</p>
+</div>
+
+<div class="card">
+<h3>Sandacz</h3>
+<p>Gumy na opadzie, jig.</p>
 </div>
 
 </section>
 
-<!-- TOP -->
-<section id="ranking">
-
-<h2 class="section-title">
-TOP 20 Najskuteczniejszych Przynęt
-</h2>
-
-<ol class="ranking">
-
-<li>Wobler Minnow</li>
-<li>Shad 10 cm</li>
-<li>Ripper Perch</li>
-<li>Błystka Mepps</li>
-<li>Kulka Proteinowa Scopex</li>
-<li>Kukurydza</li>
-<li>Robak Dżdżownica</li>
-<li>Twister Fluo</li>
-<li>Wahadłówka Alga</li>
-<li>Cykada</li>
-
-<li>Wobler Crank</li>
-<li>Żaba Gumowa</li>
-<li>Jaskółka</li>
-<li>Boczny Troczek</li>
-<li>Martwa Rybka</li>
-<li>Pellet Halibut</li>
-<li>Pop-Up</li>
-<li>Spinnerbait</li>
-<li>Chatterbait</li>
-<li>Slider</li>
-
-</ol>
-
-</section>
-
-<!-- ZBROJENIE -->
-<section id="porady">
-
-<h2 class="section-title">
-Jak Zbroić Przynęty?
-</h2>
-
-<div class="accordion">
-
-<button class="accordion-btn">
-Główka Jigowa
-</button>
-
-<div class="accordion-content">
-<p>
-Najpopularniejsze rozwiązanie
-do zbrojenia gum spinningowych.
-</p>
-</div>
-
-<button class="accordion-btn">
-Hak Offsetowy
-</button>
-
-<div class="accordion-content">
-<p>
-Idealny w zaczepach i roślinności.
-</p>
-</div>
-
-<button class="accordion-btn">
-Dozbrojka
-</button>
-
-<div class="accordion-content">
-<p>
-Dodatkowa kotwica do dużych przynęt.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- GALERIA -->
-<section>
-
-<h2 class="section-title">
-Galeria
-</h2>
-
-<div class="gallery">
-
-<img src="https://picsum.photos/500/300?1">
-<img src="https://picsum.photos/500/300?2">
-<img src="https://picsum.photos/500/300?3">
-<img src="https://picsum.photos/500/300?4">
-<img src="https://picsum.photos/500/300?5">
-<img src="https://picsum.photos/500/300?6">
-
-</div>
-
-</section>
-
-<!-- PANEL -->
-<section class="notes">
-
-<h2>Dodaj własną poradę</h2>
-
-<textarea
-id="noteInput"
-placeholder="Napisz poradę..."
-></textarea>
-
-<button id="saveNote">
-Zapisz
-</button>
-
-<div id="notesList"></div>
-
-</section>
-
-<!-- FOOTER -->
-<footer id="kontakt">
-
-<h3>🎣 Poradnik Wędkarski PRO</h3>
-
-<p>
-Kompleksowy portal dla pasjonatów
-wędkarstwa.
-</p>
-
-<p>
-2026 © Wszystkie prawa zastrzeżone
-</p>
-
+<footer>
+<p>© 2026 Świat Przynęt Wędkarskich | Strona edukacyjna</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+// SEARCH FILTER
+const search = document.getElementById("search");
+const cards = document.querySelectorAll(".card");
+
+search.addEventListener("keyup", function(){
+    let value = this.value.toLowerCase();
+
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        if(text.includes(value)){
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
 
 </body>
 </html>
