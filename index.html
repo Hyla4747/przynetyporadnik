@@ -1,140 +1,383 @@
+```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poradnik Wędkarski</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poradnik Wędkarski PRO</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        body {
-            <a href="szczupak.html">Szczupak</a> 
-            <a href="okonie.html">Okoń</a> 
-            <a href="sandacz.html">Sandacz</a> 
-            background: #f4f7f9;
-            color: #333;
-        }
+<style>
 
-        header {
-            background: #0d6e4f;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-        nav {
-            background: #094d38;
-            padding: 15px;
-            text-align: center;
-        }
+body{
+background:#0b1220;
+color:white;
+overflow-x:hidden;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
 
-        section {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+text-shadow:0 0 20px rgba(0,0,0,.6);
+}
 
-        h2 {
-            color: #0d6e4f;
-            margin-bottom: 15px;
-        }
+.hero p{
+font-size:1.3rem;
+max-width:800px;
+margin:auto;
+}
 
-        ul li {
-            margin: 10px 0;
-        }
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#00c896;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+transition:.3s;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #094d38;
-            color: white;
-            margin-top: 30px;
-        }
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #00c896;
+}
 
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-        }
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:#111827;
+padding:15px;
+text-align:center;
+backdrop-filter:blur(10px);
+}
 
-        .hero p {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-    </style>
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00c896;
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+font-size:2.8rem;
+margin-bottom:50px;
+color:#00c896;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1f2937;
+padding:25px;
+border-radius:20px;
+transition:.4s;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(0,200,150,.4);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#00c896;
+}
+
+.table-wrap{
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:#1f2937;
+border-radius:15px;
+overflow:hidden;
+}
+
+th{
+background:#00c896;
+padding:15px;
+}
+
+td{
+padding:15px;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.tip{
+background:#00c896;
+color:#111;
+padding:25px;
+border-radius:15px;
+font-weight:600;
+margin-top:30px;
+}
+
+footer{
+background:#111827;
+padding:40px;
+text-align:center;
+}
+
+footer p{
+opacity:.8;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+}
+
+</style>
 </head>
 <body>
 
 <header>
-    <h1>🎣 Poradnik Wędkarski</h1>
-    <p>Wszystko, co musisz wiedzieć o wędkarstwie</p>
+<div class="hero">
+<h1>🎣 PORADNIK WĘDKARSKI PRO</h1>
+<p>
+Największy poradnik o przynętach, ich działaniu,
+zbrojeniu oraz skutecznych technikach połowu.
+</p>
+<a href="#przynety" class="btn">Rozpocznij</a>
+</div>
 </header>
 
 <nav>
-    <a href="#sprzet">Sprzęt</a>
-    <a href="#ryby">Ryby</a>
-    <a href="#porady">Porady</a>
-    <a href="#kontakt">Kontakt</a>
+<a href="#przynety">Przynęty</a>
+<a href="#rodzaje">Rodzaje</a>
+<a href="#zbrojenie">Zbrojenie</a>
+<a href="#galeria">Galeria</a>
 </nav>
 
-<div class="hero">
-    <h2>Witaj na stronie Poradnik Wędkarski</h2>
-    <p>Poznaj techniki łowienia, sprzęt i najpopularniejsze gatunki ryb.</p>
+<section id="przynety">
+
+<h2 class="title">Rodzaje Przynęt</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🪱 Naturalne</h3>
+<p>
+Robaki, larwy, kukurydza, ciasto.
+Skuteczne na większość ryb spokojnego żeru.
+</p>
 </div>
 
-<section id="sprzet">
-    <h2>Sprzęt Wędkarski</h2>
-    <ul>
-        <li>Wędka spinningowa</li>
-        <li>Kołowrotek</li>
-        <li>Żyłka lub plecionka</li>
-        <li>Przynęty sztuczne i naturalne</li>
-        <li>Podbierak</li>
-    </ul>
+<div class="card">
+<h3>🐟 Woblery</h3>
+<p>
+Imitują ranną rybkę.
+Idealne na szczupaka, okonia i sandacza.
+</p>
+</div>
+
+<div class="card">
+<h3>🦐 Gumy</h3>
+<p>
+Twistery, rippery, shady.
+Uniwersalne przynęty spinningowe.
+</p>
+</div>
+
+<div class="card">
+<h3>✨ Błystki</h3>
+<p>
+Tworzą błyski i drgania przyciągające drapieżniki.
+</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="ryby">
-    <h2>Popularne Ryby</h2>
-    <ul>
-        <li>Szczupak</li>
-        <li>Sandacz</li>
-        <li>Okoń</li>
-        <li>Karp</li>
-        <li>Sum</li>
-    </ul>
+<section id="rodzaje">
+
+<h2 class="title">Jak Działają?</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Przynęta</th>
+<th>Działanie</th>
+<th>Cel</th>
+</tr>
+
+<tr>
+<td>Robak</td>
+<td>Naturalny ruch</td>
+<td>Leszcz, płoć, karaś</td>
+</tr>
+
+<tr>
+<td>Kukurydza</td>
+<td>Kolor i aromat</td>
+<td>Karp, amur</td>
+</tr>
+
+<tr>
+<td>Wobler</td>
+<td>Imitacja ryby</td>
+<td>Szczupak</td>
+</tr>
+
+<tr>
+<td>Guma</td>
+<td>Wibracje ogona</td>
+<td>Sandacz</td>
+</tr>
+
+<tr>
+<td>Błystka</td>
+<td>Błysk i hałas</td>
+<td>Pstrąg</td>
+</tr>
+
+</table>
+
+</div>
+
 </section>
 
-<section id="porady">
-    <h2>Przydatne Porady</h2>
-    <p>
-        Zawsze sprawdzaj przepisy obowiązujące na danym łowisku,
-        używaj odpowiedniego sprzętu do gatunku ryby oraz dbaj o środowisko.
-    </p>
+<section id="zbrojenie">
+
+<h2 class="title">Jak Zbroić Przynęty?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🎯 Główka Jigowa</h3>
+<p>
+Najpopularniejsze zbrojenie gum.
+Dobieraj ciężar do głębokości łowiska.
+</p>
+</div>
+
+<div class="card">
+<h3>🪝 Hak Offsetowy</h3>
+<p>
+Do łowienia w zaczepach i roślinności.
+Minimalizuje straty przynęt.
+</p>
+</div>
+
+<div class="card">
+<h3>⚓ Kotwice</h3>
+<p>
+Najczęściej w woblerach i błystkach.
+Zapewniają pewne zacięcie.
+</p>
+</div>
+
+<div class="card">
+<h3>🐊 Dozbrojka</h3>
+<p>
+Dodatkowa kotwica do dużych gum
+na szczupaki i sandacze.
+</p>
+</div>
+
+</div>
+
+<div class="tip">
+💡 Profesjonalna wskazówka:
+W mętnej wodzie stosuj przynęty jaskrawe,
+a w przejrzystej naturalne kolory imitujące lokalny pokarm.
+</div>
+
 </section>
 
-<section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>Email: kontakt@poradnikwedkarski.pl</p>
+<section id="galeria">
+
+<h2 class="title">Galeria Przynęt</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1534043464124-3be32fe000c9?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Poradnik Wędkarski</p>
+<p>
+© 2026 Poradnik Wędkarski PRO | Stworzony dla pasjonatów wędkarstwa 🎣
+</p>
 </footer>
 
 </body>
 </html>
+```
